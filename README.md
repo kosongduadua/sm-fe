@@ -1,61 +1,51 @@
-# sm-challenge-fe
+# Issue Management System
 
-This template should help get you started developing with Vue 3 in Vite.
+This project is a simple issue management system built with Vue 3, TypeScript, and Tailwind CSS. It provides a user interface for creating, reading, updating, and deleting issues through a REST API.
 
-## Recommended IDE Setup
+## Features
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- List all issues
+- Create new issues
+- Edit existing issues
+- Delete issues
+- Responsive design with Tailwind CSS
 
-## Type Support for `.vue` Imports in TS
+## Tech Stack
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+- Vue 3
+- TypeScript
+- Tailwind CSS
+- Axios for API calls
 
-## Customize configuration
+## Project Structure
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+- `src/components/IssueManager.vue`: Main component for managing issues
+- `src/services/IssueService.ts`: Service for handling API calls
+- `src/assets/tailwind.css`: Tailwind CSS import file
 
-## Project Setup
+## Setup
 
-```sh
-npm install
+1. Clone the repository
+2. Install dependencies:
+   ```
+   npm install
+   ```
+
+## Running the Project
+
+To run the project in development mode:
+
 ```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+## API Configuration
 
-```sh
-npm run build
-```
+The API base URL is currently set to `http://localhost:3000` in `IssueService.ts`. Update accordingly if you made changes on backend side.
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+## Future Improvements
 
-```sh
-npm run test:unit
-```
-
-### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
-
-```sh
-npm run test:e2e:dev
-```
-
-This runs the end-to-end tests against the Vite development server.
-It is much faster than the production build.
-
-But it's still recommended to test the production build with `test:e2e` before deploying (e.g. in CI environments):
-
-```sh
-npm run build
-npm run test:e2e
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+- Add error handling and user notifications
+- Implement pagination for the issue list
+- Add sorting and filtering options
+- Integrate with a state management solution like Pinia for larger applications
